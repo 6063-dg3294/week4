@@ -2,7 +2,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background("green");
   fill(0);
-  frameRate(1)
+  print (millis())
 }
 
 
@@ -13,6 +13,9 @@ let xVelocity = 5
 function draw() {
   background("green")
   print(frameCount)
+  if (millis()>2000){
+    background("blue")
+  }
   
 
 
