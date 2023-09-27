@@ -12,6 +12,16 @@ function draw() {
 
 }
 
+  //save image: 
+function keyPressed(){
+  if (key == 's'){
+    saveCanvas('myCanvas', 'png');
+  }    
+
+
+    
+}
+
 function mouseClicked(){
   fill 
   fill(
@@ -19,15 +29,10 @@ function mouseClicked(){
     random(0,256),
     random(0,256)); //等于在一行
     rect(mouseX, mouseY, 80, 80);
-  //save image: 
-  
-    function keyPressed(){
-      if (key == 's'){
-        saveCanvas('myCanvas', 'png');
-      }
-
 
     }
-keyPressed()
 
-}
+    function mouseMoved(){
+      stroke(0);
+      line(0,0,mouseX, mouseY);
+    }
