@@ -2,25 +2,23 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background("green");
   fill(0);
-  print (millis())
+  
 }
 
 
 
-let xPos = 0
-let xVelocity = 5
 
 function draw() {
   background("green")
-  print(frameCount)
-  if (millis()>2000){
-    background("blue")
-  }
-  
+  let secondsNow = second()
 
 
+  //map function = map from a range to another range  
+  // 0 -> 100 / 59 -> height
+  let myDiameter = map(secondsNow, 0, 59, 100, height)
+  ellipse(width/2, height/2, myDiameter, myDiameter)
+  // each second by 1 pixel by default
 
-  print(second())
 
 
 }
